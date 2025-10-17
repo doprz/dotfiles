@@ -1,0 +1,23 @@
+theme = "gruvbox-material"
+
+[editor]
+line-number = "relative"
+true-color = true
+cursorline = true
+auto-format = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[keys.normal]
+C-g = [
+    ":write-all", 
+    ":new", 
+    ":insert-output lazygit", 
+    ":buffer-close!", 
+    ":redraw", 
+    ":reload-all"
+]
