@@ -1,16 +1,49 @@
-theme = "gruvbox-material"
+theme = "gruvbox"
 
 [editor]
-line-number = "relative"
-true-color = true
+bufferline = "multiple"
 cursorline = true
-auto-format = true
-
-[editor.lsp]
-display-inlay-hints = true
+line-number = "relative"
+mouse = true
+true-color = true
+color-modes = true
+rulers = [120]
+end-of-line-diagnostics = "hint"
+completion-timeout = 5 # 5 is instant
 
 [editor.inline-diagnostics]
-cursor-line = "hint"
+cursor-line = "warning" # show warnings and errors on the cursorline inline
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+center = []
+right = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
 
 [keys.normal]
 C-g = [
